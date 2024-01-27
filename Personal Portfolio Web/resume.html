@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add some basic styling for the image container */
+        #imageContainer {
+            max-width: 50%;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        /* Add styling for the full-size image */
+        #fullImage {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <title>Resume - Your Name</title>
+</head>
+<body>
+
+    <section id="resume">
+        <h2>Resume of Mahlatse Samantha Mabaso</h2>
+        <br>
+        <!-- Add a container for the image -->
+        <div id="imageContainer">
+            <!-- Add the image element with a smaller size -->
+            <img id="halfImage" src="images/Screenshot_20240127_020605_OneDrive.jpg" alt="Your Image" style="width: 100%;">
+            <!-- Add the image element with the full size (initially hidden) -->
+            <img id="fullImage" src="images/Screenshot_20240127_020605_OneDrive.jpg" alt="Your Image">
+        </div>
+        <h2> Certificates of Mahlatse Samantha Mabaso</h2>
+        <br>
+        <div id="imageContainer">
+            <img id="halfImage" src="images/Screenshot_20240127_023630_OneDrive.jpg" alt="Your Image" style="width: 100%;">
+            <img id="fullImage" src="images/Screenshot_20240127_023630_OneDrive.jpg" alt="Your Image">
+            <br>
+            <img id="halfImage" src="images/Screenshot_20240127_023615_OneDrive.jpg" alt="Your Image" style="width: 100%;">
+            <img id="fullImage" src="images/Screenshot_20240127_023615_OneDrive.jpg" alt="Your Image" >
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Your custom JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Add the JavaScript code to toggle between half and full size -->
+    <script>
+        $(document).ready(function () {
+            // Get the image elements
+            const halfImage = document.getElementById('halfImage');
+            const fullImage = document.getElementById('fullImage');
+
+            // Add a click event listener to the image container
+            $('#imageContainer').click(function () {
+                // Toggle between showing/hiding the images
+                $(halfImage).toggle();
+                $(fullImage).toggle();
+            });
+        });
+    </script>
+
+</body>
+</html>
